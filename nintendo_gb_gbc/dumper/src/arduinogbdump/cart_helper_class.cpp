@@ -78,38 +78,7 @@ void cart_helper::print_cart_stuff()
 	Serial.print("This cartridge has ");
 	Serial.print( rom_size, DEC );
 	Serial.println(" ROM banks.");
-	
-	
-	switch (ram_size)
-	{
-		case rs_none:
-			Serial.println("This cartridge has no external RAM.");
-			break;
-		
-		case rs_2:
-			Serial.println("This cartridge has 2 kiB of external RAM.");
-			break;
-		
-		case rs_8:
-			Serial.println("This cartridge has 8 kiB of external RAM.");
-			break;
-		
-		case rs_32:
-			Serial.println("This cartridge has 32 kiB of external RAM.");
-			break;
-		
-		case rs_128:
-			Serial.println("This cartridge has 128 kiB of external RAM.");
-			break;
-		
-		case rs_mbc2:
-			Serial.println("This cartridge has no external RAM, but it"
-				"does have an MBC2.  MBC2's have built-in RAM.");
-			break;
-		
-		
-	}
-} 
+	} 
 
 void cart_helper::set_raw_data( uint8_t s_raw_cart_type, uint8_t s_raw_rom_size,
 	uint8_t s_raw_ram_size )
